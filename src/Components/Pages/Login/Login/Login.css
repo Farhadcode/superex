@@ -1,0 +1,19 @@
+.google-signUp{
+    height: 400px;
+    background-color: #4d148C;
+}
+.signUp-crad{
+    text-align: center;
+    font-size: 28px;
+     padding-top:160px ;     
+   
+}
+
+.signUp-crad button{
+    font-weight: 800;
+    padding: 20px;
+    color: orange;
+  
+    
+
+}
