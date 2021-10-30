@@ -15,6 +15,8 @@ import Services from './Components/Pages/HomePage/Services/Services';
 import Login from './Login/Login/Login';
 import NotFound from './Components/Pages/NotFound/NotFound';
 import Footer from './Components/Pages/Shared/Footer/Footer';
+import AddService from './Components/Pages/HomePage/AddService/AddService';
+import Booking from './Components/Pages/HomePage/Booking/Booking';
 
 
 function App() {
@@ -33,6 +35,12 @@ function App() {
         </Route>
         <Route path="/login">
           <Login></Login>
+        </Route>
+        <Route path="/addService">
+          <AddService></AddService>
+        </Route>
+        <Route path="/booking/:serviceId">
+          <Booking></Booking>
         </Route>
         <Route exact path="*">
           <NotFound></NotFound>
