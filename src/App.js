@@ -3,18 +3,18 @@ import './App.css';
 import React from "react";
 import {
 
+
   BrowserRouter as Router,
   Switch,
   Route,
 
 } from "react-router-dom";
 import Header from './Components/Pages/Shared/Header/Header';
-
-import Login from './Components/Pages/Login/Login/Login';
-import Footer from './Components/Pages/Shared/Footer/Footer';
-import Home from './Components/Pages/HomePage/Home/Home';
+import Home from './Components/Pages/HomePage/Home/Home'
+import Services from './Components/Pages/HomePage/Services/Services';
+import Login from './Login/Login/Login';
 import NotFound from './Components/Pages/NotFound/NotFound';
-
+import Footer from './Components/Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -28,7 +28,9 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-
+        <Route path="/services">
+          <Services></Services>
+        </Route>
         <Route path="/login">
           <Login></Login>
         </Route>

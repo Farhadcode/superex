@@ -1,9 +1,13 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// import useAuth from '../../../../hooks/useAuth';
+import useFirebase from '../../../../hooks/useFirebase';
 import './Header.css'
 
 const Header = () => {
+    const { user, handleLogout } = useFirebase();
+    // console.log(user);
     return (
         <>
             <Navbar className="navbar" variant="light" sticky="top" collapseOnSelect expand="lg">
@@ -16,15 +20,23 @@ const Header = () => {
                             <Link to="/services">serveses</Link>
                             <Link to="/booking">Booking</Link>
                             <Link to="/contect">Contect Us</Link>
-                            {/* {user?.email ?
-                                <Link to="/home"> <Button onClick={logOut} className="main-btn rounded-pill"> LogOut</Button></Link> :
-                                <Link to="/login"> <Button className="main-btn rounded-pill">Login </Button></Link>
+                            {user?.email ?
+                                <Link to="/home"> <button onClick={handleLogout} className="main-btn rounded-pill"> LogOut</button></Link> :
+                                <Link to="/login"> <button className="main-btn rounded-pill">Login </button></Link>
                             }
-                            // <br /> */}
-                            {/* // <Navbar.Text>
+                            <br />
+                            <Navbar.Text>
 
-                            //     <Link to="/home">{user?.displayName}</Link>
-                            // </Navbar.Text> */}
+                                <div className="user-style">
+                                    <img src={user?.photoURL} alt="" />
+                                    <p > {user?.displayName}</p>
+
+                                </div>
+
+
+
+
+                            </Navbar.Text>
                         </Nav>
                     </Navbar.Collapse>
 

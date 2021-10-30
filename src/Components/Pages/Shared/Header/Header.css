@@ -31,3 +31,24 @@ Nav a:hover{
     font-weight: 700; 
     
 }
+
+.main-btn {
+    font-weight: 800;
+    height: 50px;
+    width: 150px;
+    padding: 5px;
+    color: orange;
+  
+ }
+ .user-style{
+     display:flex;
+     color: white;  
+
+ }
+ .user-style img{
+     width: 50px;
+     height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    
+ }

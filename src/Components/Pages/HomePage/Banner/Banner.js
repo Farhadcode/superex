@@ -1,7 +1,8 @@
 import React from 'react';
 import './Banner.css'
 import bannerImg from '../../../../image/Banner/banner1.png'
-import Login from '../../Login/Login/Login';
+import Login from '../../../../Login/Login/Login';
+
 
 
 const Banner = () => {
