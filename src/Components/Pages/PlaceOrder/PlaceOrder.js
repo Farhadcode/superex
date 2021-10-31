@@ -56,7 +56,7 @@ const PlaceOrder = () => {
 
                             <br />
 
-                            <select {...register("deliveri Charge")} className="p-2 m-2 w-100">
+                            <select {...register("Charge")} className="p-2 m-2 w-100">
                                 <option value="50">Dhaka</option>
                                 <option value="80">Chattogram</option>
                                 <option value="100">Other</option>
@@ -64,7 +64,7 @@ const PlaceOrder = () => {
                             </select>
 
                             <br />
-                            <input defaultValue="" {...register(" your address")} placeholder="address" className="p-2 m-2 w-100" />
+                            <input defaultValue="" {...register("address")} placeholder="address" className="p-2 m-2 w-100" />
                             <br />
 
                             {errors.exampleRequired && <span>This field is required</span>}
