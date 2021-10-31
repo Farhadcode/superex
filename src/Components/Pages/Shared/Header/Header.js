@@ -19,7 +19,7 @@ const Header = () => {
                             <Link to="/home">Home</Link>
                             <Link to="/services">Serveses</Link>
                             {user?.email ?
-                                <Link to="">Booking</Link>
+                                <Link to="/admin">Admin</Link>
                                 : ' '
                             }
                             {user?.email ?
