@@ -15,9 +15,12 @@ import Services from './Components/Pages/HomePage/Services/Services';
 import Login from './Login/Login/Login';
 import NotFound from './Components/Pages/NotFound/NotFound';
 import Footer from './Components/Pages/Shared/Footer/Footer';
-import AddService from './Components/Pages/HomePage/AddService/AddService';
+
 import Booking from './Components/Pages/HomePage/Booking/Booking';
 import MyOrder from './Components/Pages/HomePage/MyOrder/MyOrder';
+import AddService from './Components/Pages/Admin/AddService/AddService';
+import OrderManage from './Components/Pages/Admin/OrderManage/OrderManage';
+
 
 
 
@@ -45,6 +48,9 @@ function App() {
         </Route>
         <Route path="/addService">
           <AddService></AddService>
+        </Route>
+        <Route path="/orderManage">
+          <OrderManage></OrderManage>
         </Route>
         <Route path="/booking/:serviceId">
           <Booking></Booking>
