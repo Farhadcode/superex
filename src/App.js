@@ -17,6 +17,10 @@ import NotFound from './Components/Pages/NotFound/NotFound';
 import Footer from './Components/Pages/Shared/Footer/Footer';
 import AddService from './Components/Pages/HomePage/AddService/AddService';
 import Booking from './Components/Pages/HomePage/Booking/Booking';
+import MyOrder from './Components/Pages/HomePage/MyOrder/MyOrder';
+
+
+
 
 
 function App() {
@@ -32,6 +36,9 @@ function App() {
         </Route>
         <Route path="/services">
           <Services></Services>
+        </Route>
+        <Route path="/myOrder">
+          <MyOrder></MyOrder>
         </Route>
         <Route path="/login">
           <Login></Login>

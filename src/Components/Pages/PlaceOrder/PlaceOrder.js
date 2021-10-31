@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useFirebase from '../../../hooks/useFirebase';
 import './PlaceOrder.css'
 import { useForm } from 'react-hook-form';
 
 const PlaceOrder = () => {
     const { user } = useFirebase();
+    //const [user, setUser] = useState(null);
     //console.log(user);
     const {
         register,
@@ -15,13 +16,14 @@ const PlaceOrder = () => {
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("http://localhost:5000/addEvent", {
+        fetch("http://localhost:5000/orders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
         })
             .then((res) => res.json())
             .then((result) => console.log(result));
+        //.then((result) => setUser(result));
         console.log(data);
     };
     return (
