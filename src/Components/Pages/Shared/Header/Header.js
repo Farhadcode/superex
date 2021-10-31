@@ -21,12 +21,10 @@ const Header = () => {
                             {user?.email ?
                                 <Link to="">Booking</Link>
                                 : ' '
-
                             }
                             {user?.email ?
                                 <Link to="/myOrder">MyOrder</Link>
                                 : ' '
-
                             }
                             {/* <Link to="/myOrder">MyOrder</Link> */}
                             {user?.email ?
