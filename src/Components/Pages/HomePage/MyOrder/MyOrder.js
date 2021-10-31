@@ -15,6 +15,22 @@ const MyOrder = () => {
     }, [user.email]);
     console.log(orders);
 
+
+    const orderDelete = (id) => {
+
+        fetch(`http://localhost:5000/myOrders/${id}`, {
+            method: "DELETE",
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount) {
+                    alert(' order Cancel ')
+                    const remaining = orders.filter(order => order._id !== id);
+                    setOrders(remaining);
+                }
+            })
+    }
     return (
         <div>
             <h1 className="text-center">All Orders {orders?.length}</h1>
@@ -26,9 +42,11 @@ const MyOrder = () => {
                         <th>Name</th>
                         <th>phone</th>
                         <th>Email</th>
-                        <th>Date</th>
                         <th>Price</th>
                         <th>Address</th>
+                        <th>Date</th>
+
+
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -42,7 +60,7 @@ const MyOrder = () => {
                             <td>{order?.Charge}</td>
                             <td>{order?.address}</td>
                             <td>{order?.date}</td>
-                            <button className="btn bg-danger p-2">Delete</button>
+                            <button className="btn bg-danger p-2" onClick={() => orderDelete(order?._id)}>Delete</button>
                         </tr >
                     </tbody >
                 ))}
