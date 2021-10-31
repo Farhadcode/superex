@@ -1,10 +1,9 @@
 import React from 'react';
-import './CustomerReview.css';
 
 const CustomerReview = () => {
     return (
         <div>
-            <h2> Customer Review</h2>
+            <h2> Customar Review </h2>
         </div>
     );
 };

@@ -9,10 +9,10 @@ const Service = ({ servece }) => {
             <div>
                 <img src={img} alt="" />
             </div>
-            <div>
+            <div className="card-body">
                 <h2> {name} </h2>
                 <p>{description}</p>
-                <Link to={`/booking/${_id}`}> <button>Booking</button></Link>
+                <Link to={`/booking/${_id}`}> <button className="">Booking</button></Link>
             </div>
         </div>
     );

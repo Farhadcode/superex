@@ -19,13 +19,13 @@ const Login = () => {
     return (
         <div className="google-signUp">
             <div className="signUp-crad">
-                {/* {user?.email ?
-                    <Link to="/home"> <Button onClick={handleLogout} className="main-btn rounded-pill"> Sign Out</Button></Link> :
-                    <Link to="/login"> <Button className="main-btn rounded-pill">Sign Up Now</Button></Link>
-                } */}
+                {user?.email ?
+                    <Link to="/home"> <button onClick={handleLogout} className=" rounded-pill"> Sign Out</button></Link> :
+                    <Link to="/login"> <button onClick={handleGoogleLogin} className=" rounded-pill">Sign Up Now</button></Link>
+                }
 
 
-                <Link to="/login"><button className="rounded-pill" onClick={handleGoogleLogin}> Sign Up Now</button></Link>
+                {/* <Link to="/login"><button className="rounded-pill" onClick={handleGoogleLogin}> Sign Up Now</button></Link> */}
             </div>
         </div>
     );

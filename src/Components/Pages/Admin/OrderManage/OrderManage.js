@@ -5,14 +5,14 @@ const OrderManage = () => {
     const [allOrder, setAllOrder] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://grim-vampire-55114.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setAllOrder(data))
     }, [])
 
     const AdminOrderDelete = (id) => {
 
-        fetch(`http://localhost:5000/allOrders/${id}`, {
+        fetch(`https://grim-vampire-55114.herokuapp.com/allOrders/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

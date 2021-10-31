@@ -16,7 +16,7 @@ const PlaceOrder = () => {
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("http://localhost:5000/orders", {
+        fetch("https://grim-vampire-55114.herokuapp.com/orders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

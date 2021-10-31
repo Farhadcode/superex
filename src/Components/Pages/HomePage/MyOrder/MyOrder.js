@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${user?.email}`)
+        fetch(`https://grim-vampire-55114.herokuapp.com/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [user.email]);
@@ -18,7 +18,7 @@ const MyOrder = () => {
 
     const orderDelete = (id) => {
 
-        fetch(`http://localhost:5000/myOrders/${id}`, {
+        fetch(`https://grim-vampire-55114.herokuapp.com/myOrders/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

@@ -21,6 +21,8 @@ import MyOrder from './Components/Pages/HomePage/MyOrder/MyOrder';
 import AddService from './Components/Pages/Admin/AddService/AddService';
 import OrderManage from './Components/Pages/Admin/OrderManage/OrderManage';
 import AdminDashboard from './Components/Pages/Admin/AdminDashboard/AdminDashboard';
+import PrivateRout from './Components/Pages/HomePage/PrivateRout/PrivateRout';
+
 
 
 
@@ -59,6 +61,9 @@ function App() {
         <Route path="/booking/:serviceId">
           <Booking></Booking>
         </Route>
+        {/* <PrivateRout path="/booking/:serviceId">
+          <Booking></Booking>
+        </PrivateRout> */}
         <Route path="/login">
           <Login></Login>
         </Route>
