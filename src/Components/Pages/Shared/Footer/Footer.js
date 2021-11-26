@@ -14,7 +14,7 @@ import {
     faMapMarkedAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-
+// footer
 const Footer = () => {
     return (
         <div>

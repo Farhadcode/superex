@@ -5,8 +5,8 @@ import useFirebase from '../hook/useFirebase';
 export const AuthContext = createContext();
 
 
-const AuthProvider = (props) => {
-    const { children } = props;
+const AuthProvider = ({ children }) => {
+
     const firebaseContext = useFirebase();
     return (
         <AuthContext.Provider value={firebaseContext}>

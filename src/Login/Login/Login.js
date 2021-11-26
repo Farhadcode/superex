@@ -2,17 +2,19 @@ import React from 'react';
 import './Login.css'
 
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 // import useAuth from '../../hooks/useAuth';
-import useFirebase from '../../hooks/useFirebase';
+// import useFirebase from '../../hooks/useFirebase';
+
 
 
 
 
 const Login = () => {
 
-    const { handleGoogleLogin, user, handleLogout } = useFirebase();
-    // const { handleGoogleLogin } = useAuth() || {};
+    const { handleGoogleLogin, user, handleLogout } = useFirebase()
+    //const { handleGoogleLogin } = useAuth() || {};
 
 
 

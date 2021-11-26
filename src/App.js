@@ -21,7 +21,8 @@ import MyOrder from './Components/Pages/HomePage/MyOrder/MyOrder';
 import AddService from './Components/Pages/Admin/AddService/AddService';
 import OrderManage from './Components/Pages/Admin/OrderManage/OrderManage';
 import AdminDashboard from './Components/Pages/Admin/AdminDashboard/AdminDashboard';
-import PrivateRout from './Components/Pages/HomePage/PrivateRout/PrivateRout';
+
+
 
 
 
@@ -31,6 +32,7 @@ import PrivateRout from './Components/Pages/HomePage/PrivateRout/PrivateRout';
 
 function App() {
   return (
+
     <Router>
       <Header />
       <Switch>
@@ -62,8 +64,8 @@ function App() {
           <Booking></Booking>
         </Route>
         {/* <PrivateRout path="/booking/:serviceId">
-          <Booking></Booking>
-        </PrivateRout> */}
+            <Booking></Booking>
+          </PrivateRout> */}
         <Route path="/login">
           <Login></Login>
         </Route>
@@ -73,6 +75,8 @@ function App() {
       </Switch>
       <Footer></Footer>
     </Router>
+
+
   );
 }
 

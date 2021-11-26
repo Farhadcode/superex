@@ -4,7 +4,7 @@ import PlaceOrder from '../../PlaceOrder/PlaceOrder';
 
 const Booking = () => {
     const { serviceId } = useParams();
-    // console.log(serviceId);
+    console.log(serviceId);
 
     const [service, setService] = useState({});
     useEffect(() => {
